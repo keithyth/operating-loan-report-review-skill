@@ -1,0 +1,24 @@
+{
+  "case_id": "service-mortgage-simulated",
+  "source_report": "服务类抵押模拟案例.docx",
+  "materials_provided": ["report"],
+  "application": {"amount": 280.0, "guarantee_mode": "mortgage"},
+  "operation": {"business_type": "service", "sales_current": 980.0, "sales_previous": 850.0, "yoy_reported": 0.152941},
+  "fund_demand": {"accounts_receivable": 360.0, "prepayments": 150.0, "other_receivables": 90.0, "accounts_payable": 120.0, "advances_from_customers": 180.0, "reported_demand": 300.0},
+  "financial": {"assets_total": 1260.0, "liabilities_total": 410.0, "net_asset_reported": 850.0},
+  "collateral": {"secured_amount": 280.0, "recognized_value": 400.0, "ltv_reported": 0.70},
+  "crosscheck": {"application_amounts": [{"value":280.0,"evidence_id":"E001"},{"value":280.0,"evidence_id":"E002"}], "sales_values": [{"value":980.0,"evidence_id":"E003"},{"value":980.0,"evidence_id":"E004"}]},
+  "redacted_fields": [], "missing_fields": [],
+  "evidence": [
+    {"evidence_id":"E001","layer":"REPORT_RECORDED","location":"申请方案"}, {"evidence_id":"E002","layer":"REPORT_RECORDED","location":"调查结论"},
+    {"evidence_id":"E003","layer":"REPORT_RECORDED","location":"经营表"}, {"evidence_id":"E004","layer":"REPORT_RECORDED","location":"经营分析"},
+    {"evidence_id":"E005","layer":"REPORT_RECORDED","location":"资金测算"}, {"evidence_id":"E006","layer":"REPORT_RECORDED","location":"资产负债"},
+    {"evidence_id":"E007","layer":"REPORT_RECORDED","location":"抵押物"}
+  ],
+  "fact_evidence": {
+    "application.amount":["E001"], "operation.sales_current":["E003"], "operation.sales_previous":["E003"], "operation.yoy_reported":["E004"],
+    "fund_demand.accounts_receivable":["E005"], "fund_demand.prepayments":["E005"], "fund_demand.other_receivables":["E005"], "fund_demand.accounts_payable":["E005"], "fund_demand.advances_from_customers":["E005"], "fund_demand.reported_demand":["E005"],
+    "financial.assets_total":["E006"], "financial.liabilities_total":["E006"], "financial.net_asset_reported":["E006"],
+    "collateral.secured_amount":["E001"], "collateral.recognized_value":["E007"], "collateral.ltv_reported":["E007"]
+  }
+}

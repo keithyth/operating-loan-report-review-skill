@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "entities": ["Report", "Applicant", "Spouse", "Enterprise", "RelatedEnterprise", "CreditApplication", "Operation", "FundDemand", "Asset", "Liability", "ExternalGuarantee", "Collateral", "Guarantor", "RepaymentSource", "Risk", "Control", "Conclusion", "Evidence", "PublicFinding"],
+  "relations": ["APPLIES_FOR", "OPERATES", "OWNS", "BORROWS", "GUARANTEES", "RELATED_TO", "SECURES", "SUPPORTS", "CONTRADICTS", "MITIGATES", "SOURCED_FROM"],
+  "fact_statuses": ["PRESENT", "EXPLICIT_NONE", "REDACTED_PRESENT", "MISSING", "CONFLICTING", "UNCERTAIN"],
+  "evidence_layers": ["REPORT_RECORDED", "DETERMINISTIC_CALCULATION", "PUBLIC_INFORMATION", "EXTERNAL_MATERIAL"],
+  "rule_statuses": ["PASS", "WARN", "FAIL", "NOT_APPLICABLE", "NOT_RUN_MISSING_INPUT", "UNCERTAIN", "MANUAL_REVIEW"],
+  "invariants": [
+    "Every material finding references evidence_ids.",
+    "REDACTED_PRESENT is not MISSING.",
+    "Missing external material never produces PASS or FAIL for an external rule.",
+    "Public information is separated from report-recorded facts.",
+    "Conditional rules run only after applicability is established."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "case_id": "legacy-service-report",
+  "source_report": "授信调查报告服务类.doc",
+  "materials_provided": ["report"],
+  "application": {"amount": 130.0, "guarantee_mode": "mortgage"},
+  "operation": {"business_type": "service", "sales_current": 3079.4, "sales_previous": null, "yoy_reported": null},
+  "fund_demand": {"accounts_receivable": null, "prepayments": null, "other_receivables": null, "accounts_payable": null, "advances_from_customers": null, "reported_demand": null},
+  "financial": {"assets_total": null, "liabilities_total": null, "net_asset_reported": null},
+  "collateral": {"secured_amount": 130.0, "recognized_value": 187.9, "ltv_reported": 0.6919},
+  "crosscheck": {"application_amounts": [{"value":130.0,"evidence_id":"E101"},{"value":130.0,"evidence_id":"E102"}], "sales_values": [{"value":3079.4,"evidence_id":"E103"},{"value":5000.0,"evidence_id":"E104"}]},
+  "redacted_fields": ["applicant.name", "spouse.name"], "missing_fields": ["fund_demand.accounts_receivable", "fund_demand.prepayments"],
+  "evidence": [
+    {"evidence_id":"E101","layer":"REPORT_RECORDED","location":"授信方案"}, {"evidence_id":"E102","layer":"REPORT_RECORDED","location":"调查意见"},
+    {"evidence_id":"E103","layer":"REPORT_RECORDED","location":"经营数据"}, {"evidence_id":"E104","layer":"REPORT_RECORDED","location":"经营描述"},
+    {"evidence_id":"E105","layer":"REPORT_RECORDED","location":"抵押物表"}, {"evidence_id":"E106","layer":"REPORT_RECORDED","location":"基本情况","quote":"客户及配偶姓名已用XXX脱敏"}
+  ],
+  "fact_evidence": {
+    "application.amount":["E101"], "operation.sales_current":["E103"],
+    "collateral.secured_amount":["E101"], "collateral.recognized_value":["E105"], "collateral.ltv_reported":["E105"]
+  }
+}

@@ -1,0 +1,18 @@
+__pycache__/
+*.py[cod]
+
+output/
+audit/
+*.log
+
+# 禁止提交客户及底层材料
+*.doc
+*.docx
+*.pdf
+*.xls
+*.xlsx
+*.csv
+
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "profiles": [
+    {"id": "generic-operating-loan", "match": ["经营贷", "经营性贷款", "个人经营性授信"], "required_rules": ["R-COMP-SCHEME", "R-COMP-OPERATION", "R-COMP-REPAYMENT", "R-ANL-CONCLUSION"]},
+    {"id": "operating-loan-easy", "match": ["经营性贷易通", "贷易通"], "inherits": "generic-operating-loan", "required_rules": ["R-CALC-FUND-DEMAND"]},
+    {"id": "legacy-flexible-operating-loan", "match": ["贷易融"], "inherits": "generic-operating-loan", "required_rules": []}
+  ],
+  "guarantee_modes": {
+    "mortgage": ["R-COMP-COLLATERAL", "R-CALC-LTV", "R-EXT-TITLE", "R-EXT-VALUATION"],
+    "guarantee": ["R-COMP-GUARANTOR", "R-ANL-GUARANTOR"],
+    "credit": [],
+    "combined": ["R-COMP-COLLATERAL", "R-COMP-GUARANTOR", "R-CALC-LTV", "R-EXT-TITLE", "R-EXT-VALUATION", "R-ANL-GUARANTOR"]
+  }
+}
